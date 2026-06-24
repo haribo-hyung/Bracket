@@ -1,0 +1,11 @@
+services:
+  bracket:
+    image: ghcr.io/haribo-hyung/bracket:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - bracket-config:/app/config
+    restart: unless-stopped
+
+volumes:
+  bracket-config:

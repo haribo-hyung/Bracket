@@ -1,0 +1,96 @@
+/* ============================================================
+   Bracket — base element styles & helpers
+   Minimal resets + a few utility classes the cards/kits lean on.
+   ============================================================ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--text-body);
+  background: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-variant-numeric: tabular-nums;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-strong);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-snug);
+  margin: 0;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* brand gradient text — Bracket wordmark / modal titles */
+.bracket-gradient-text {
+  background: linear-gradient(115deg, var(--purple-300) 0%, var(--purple-200) 60%, #e9d5ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* thin custom scrollbars in the brand palette — applied to every scrollable area */
+* { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--accent) 60%, transparent) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: var(--radius-full);
+  border: 2px solid transparent; background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--accent); background-clip: padding-box; }
+*::-webkit-scrollbar-corner { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Light theme: darken the wordmark gradient so it stays legible on light surfaces. */
+[data-theme="light"] .bracket-gradient-text {
+  background: linear-gradient(115deg, var(--purple-700) 0%, var(--purple-500) 55%, var(--purple-400) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Global keyboard focus ring — applies to every focusable control (incl. the
+   compiled design-system buttons/inputs, which render as native elements). */
+:focus-visible {
+  outline: var(--ring-width, 2px) solid var(--ring);
+  outline-offset: var(--ring-offset, 2px);
+  border-radius: inherit;
+}
+:focus:not(:focus-visible) { outline: none; }
+[data-theme="light"] { --ring: color-mix(in srgb, var(--purple-700) 55%, transparent); }
+
+/* Tactile press feedback (neutralised under reduced-motion above). */
+button:active, [role="button"]:active { transform: scale(0.97); }
+
+/* Screen-reader-only utility. */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+
+/* primary "Request" link — hover highlight (matches the design-system buttons) */
+.bracket-req { transition: filter .15s ease, box-shadow .15s ease; }
+.bracket-req:hover { filter: brightness(1.12); box-shadow: var(--shadow-md); }
+.bracket-req:active { filter: brightness(0.96); }

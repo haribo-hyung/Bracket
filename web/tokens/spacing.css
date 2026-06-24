@@ -1,0 +1,41 @@
+/* ============================================================
+   Bracket — Spacing, radius & sizing tokens
+   4px base grid. Posters use the 2:3 movie-poster ratio.
+   ============================================================ */
+
+:root {
+  /* ---- spacing scale (4px base) ---- */
+  --space-0:  0;
+  --space-1:  0.25rem;   /* 4  */
+  --space-2:  0.5rem;    /* 8  */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.25rem;   /* 20 */
+  --space-6:  1.5rem;    /* 24 */
+  --space-8:  2rem;      /* 32 */
+  --space-10: 2.5rem;    /* 40 */
+  --space-12: 3rem;      /* 48 */
+  --space-16: 4rem;      /* 64 */
+
+  /* ---- radii ---- */
+  --radius-xs:   0.25rem;  /* 4  — chips, badges inner */
+  --radius-sm:   0.375rem; /* 6  — buttons, inputs */
+  --radius-md:   0.5rem;   /* 8  — posters, small cards */
+  --radius-lg:   0.75rem;  /* 12 — cards, modals */
+  --radius-xl:   1rem;     /* 16 — drawers, sheets */
+  --radius-2xl:  1.5rem;   /* 24 — feature panels */
+  --radius-full: 9999px;   /* pills, avatars, badges */
+
+  /* ---- poster sizing (2:3) ---- */
+  --poster-w-xs: 32px;
+  --poster-w-sm: 44px;
+  --poster-w-md: 60px;
+  --poster-w-lg: 92px;
+  --poster-ratio: 2 / 3;  /* @kind other */
+
+  /* ---- layout ---- */
+  --nav-h: 64px;
+  --drawer-w: 380px;
+  --content-max: 1280px;
+  --tap-min: 44px;   /* minimum touch target */
+}

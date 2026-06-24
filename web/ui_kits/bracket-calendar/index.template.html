@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Bracket</title>
+<meta name="theme-color" content="#111827" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Bracket" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="/styles.css?v=__VER__" />
+<style>
+  /* Inline critical gradient — fallback if @import chain is slow/blocked */
+  .bracket-gradient-text {
+    background: linear-gradient(115deg, #a78bfa 0%, #c4b5fd 60%, #e9d5ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  [data-theme="light"] .bracket-gradient-text {
+    background: linear-gradient(115deg, #471aa0 0%, #7c3aed 55%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  html, body { height: 100%; margin: 0; }
+  #root {
+    height: 100vh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: border-box;
+  }
+</style>
+<script src="/assets/vendor/react-18.3.1.min.js?v=__VER__"></script>
+<script src="/assets/vendor/react-dom-18.3.1.min.js?v=__VER__"></script>
+<script src="/_ds_bundle.js?v=__VER__"></script>
+<script src="/ui_kits/bracket-calendar/client.js?v=__VER__"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Precompiled (build-deploy.sh). Edit the .jsx sources, then rebuild. -->
+  <script src="/ui_kits/bracket-calendar/ds-patches.js?v=__VER__"></script>
+  <script src="/ui_kits/bracket-calendar/topbar.js?v=__VER__"></script>
+  <script src="/ui_kits/bracket-calendar/calendar.js?v=__VER__"></script>
+  <script src="/ui_kits/bracket-calendar/modals.js?v=__VER__"></script>
+  <script src="/ui_kits/bracket-calendar/app.js?v=__VER__"></script>
+</body>
+</html>

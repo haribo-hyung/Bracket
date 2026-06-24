@@ -1,0 +1,8 @@
+/* ============================================================
+   Bracket — Webfonts
+   Inter is the typeface used by the Seerr UI (font-family:
+   'Inter Variable'). Loaded here from the Google Fonts CDN.
+   NOTE: substitution flagged in README — swap for a self-hosted
+   Inter Variable .woff2 for production / offline use.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');

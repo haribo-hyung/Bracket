@@ -1,0 +1,11 @@
+# Never commit secrets or local state to the backup mirror
+*.env
+!*.env.example
+*.db
+*.db-*
+*.sqlite*
+/data/
+**/certs/*.pem
+__pycache__/
+*.pyc
+.DS_Store
